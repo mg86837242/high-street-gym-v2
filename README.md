@@ -25,7 +25,7 @@ A gym website project created for school work.
 
 ## 2. Changelog
 
-This changelog is created as a quick reference. In real development and production, changelogs will be managed within GitHub releases.
+These changelogs are created as a quick reference. In real development and production, changelogs will be managed within GitHub releases.
 
 ### V0
 
