@@ -39,12 +39,12 @@ This version is created because the previous version is stuck on the coding of m
 
 This version will focus on the implementation of ORM.
 
--   Adopt Sequelize as ORM, subsequently leads to the change of data modeling
+-   Adopt Sequelize as the ORM tool, subsequently leads to the change of data modeling
 -   Provide an alternative solution by using npm scripts to automate the creation and population of tables in an existing [MySQL schema/database](https://stackoverflow.com/questions/11618277/difference-between-schema-database-in-mysql) with the same name as the database string specified in `./src/data/database.js`, this approach is inspired by the [seeding in Prisma](https://www.prisma.io/docs/guides/database/seed-database).
 
 #### V2
 
-This version is created because of issues encountered during the implementation of [basing the .prettierignore on .gitignore and .eslintignore](https://prettier.io/docs/en/install.html), which calls for [these solutions](https://stackoverflow.com/questions/65635648/how-to-base-prettierignore-file-on-gitignore). The issue is potentially caused by [the use of proxy server](https://techcommunity.microsoft.com/t5/windows-powershell/the-term-is-not-recognized-as-the-name-of-a-cmdlet/m-p/1414518) when using `parcel` and `webpack`. Moreover, the project file/folder structure in Vite is more close to the one used in Next.js, which will help to smooth out the transition to Next.js in the future.
+This version is created because of issues encountered during the implementation of [basing the .prettierignore on .gitignore and .eslintignore](https://prettier.io/docs/en/install.html), which calls for [these solutions](https://stackoverflow.com/questions/65635648/how-to-base-prettierignore-file-on-gitignore). The issue is potentially caused by [the use of proxy server](https://techcommunity.microsoft.com/t5/windows-powershell/the-term-is-not-recognized-as-the-name-of-a-cmdlet/m-p/1414518) when using `parcel` and `webpack`. Moreover, the project file/folder structure in Vite is more close to the one used in Next.js, which will help the developer to smooth out the transition to Next.js in the future.
 
 This version will focus on the implementation of ORM.
 
