@@ -23,7 +23,7 @@ A gym website project created for school work.
 -   [x] Sequelize – ORM for data modeling
 -   [ ] ...
 
-## 2. Changelog (for Dev Use Only)
+## 2. Changelog
 
 This changelog is created as a quick reference. In real development and production, changelogs will be managed within GitHub releases.
 
