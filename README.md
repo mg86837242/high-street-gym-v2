@@ -1,12 +1,12 @@
-# High Street Gym v2
+# 💪 High Street Gym v2
 
 A gym website project created for school work.
 
-# Deployment Instructions
+# 🛠️ Deployment Instructions
 
 WIP
 
-# Dev Use Only
+# 📖 Dev Use Only
 
 ## 1. To-Do List
 
