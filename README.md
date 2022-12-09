@@ -8,7 +8,7 @@ WIP
 
 ## 📖 Dev Use Only
 
-### 1. To-Do List
+### 1. ✔️ To-Do List
 
 #### 1.1 Coding
 
@@ -27,7 +27,7 @@ WIP
 -   [x] Sequelize – ORM for data modeling
 -   [ ] ...
 
-### 2. Changelogs
+### 2. 🔁 Changelogs
 
 These changelogs are created as quick references. In real development and production, changelogs will be managed within GitHub releases.
 
