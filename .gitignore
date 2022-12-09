@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 # Test
-./src/App.css
-./src/App.jsx
-./src/index.css
-./src/main.jsx
+src/App.css
+src/App.jsx
+src/index.css
+src/main.jsx
