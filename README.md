@@ -8,7 +8,7 @@ WIP
 
 ## 📖 Dev Use Only
 
-### 1. ✔️ To-Do List
+### 1. ✅ To-Do List
 
 #### 1.1 Coding
 
