@@ -1,4 +1,4 @@
-High Street Gym v2
+# High Street Gym v2
 
 A gym website project created for school work.
 
