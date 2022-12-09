@@ -1,21 +1,19 @@
 # 1. Title
 
-High Street Gym v2
-
-# 2. Description
+# 1. High Street Gym v2
 
 A gym website project created for school work.
 
-# 3. To-Do List (for Dev Use Only)
+# 2. To-Do List (for Dev Use Only)
 
-## 3.1 Coding
+## 2.1 Coding
 
 -   [x] Data modeling
 -   [ ] Models
 -   [ ] Controllers
 -   [ ] Views
 
-## 3.2 Research
+## 2.2 Research
 
 -   [x] React 18
 -   [x] Vite – for bundling and scaffolding
@@ -25,7 +23,7 @@ A gym website project created for school work.
 -   [x] Sequelize – ORM for data modeling
 -   [ ] ...
 
-# 4. Changelog (for Dev Use Only)
+# 3. Changelog (for Dev Use Only)
 
 This changelog is created as a quick reference. In real development and production, changelogs will be managed within GitHub releases.
 
