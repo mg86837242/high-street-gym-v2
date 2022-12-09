@@ -2,7 +2,7 @@
 
 A gym website project created for school work.
 
-# 🏟️ Deployment Instructions
+# 🏠 Deployment Instructions
 
 WIP
 
