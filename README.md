@@ -17,7 +17,7 @@ WIP
 -   [ ] Controllers
 -   [ ] Views
 
-#### A1.2 Research
+#### 1.2 Research
 
 -   [x] React 18
 -   [x] Vite – for bundling and scaffolding
