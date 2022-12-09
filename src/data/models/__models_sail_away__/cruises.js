@@ -1,5 +1,5 @@
-import { db_conn } from "../database.js";
+import { db_conn } from '../database.js';
 
 export function getAllCruises() {
-  return db_conn.query("SELECT * FROM cruises");
+	return db_conn.query('SELECT * FROM cruises');
 }
