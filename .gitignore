@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Test
+./src/App.css
+./src/App.jsx
+./src/index.css
+./src/main.jsx
