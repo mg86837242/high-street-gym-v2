@@ -1,5 +1,3 @@
-# 1. Title
-
 # 1. High Street Gym v2
 
 A gym website project created for school work.
