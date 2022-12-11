@@ -7,7 +7,7 @@ const port = process.env.PORT || 8081;
 app.use(express.json());
 
 app.get('/helloworld', (req, res) => {
-	res.status(200).json({ status: 200, message: 'Hello world' });
+    res.status(200).json({ status: 200, message: 'Hello world' });
 });
 
 // Import controllers here
@@ -17,5 +17,5 @@ app.get('/helloworld', (req, res) => {
 // app.use('/bookings', bookingController)
 
 app.listen(port, () => {
-	console.log(`Backend started on http://localhost:${port}`);
+    console.log(`Backend started on http://localhost:${port}`);
 });
