@@ -1,5 +1,5 @@
-import { sequelize } from '../database.js';
-import { Address, User, Gym, Member, Blog, Trainer, GymTrainer, Activity, Session, Booking } from './schema.js';
+import sequelize from '../database';
+import { Address, User, Gym, Member, Blog, Trainer, GymTrainer, Activity, Session, Booking } from './schema';
 
 // The reason why this is called `seed.js` b/c of: https://www.prisma.io/docs/guides/database/seed-database
 // Also, the scaffolding of `models` folder is by juxtaposing: (1) https://www.prisma.io/docs/concepts/components/prisma-schema, (2) https://www.prisma.io/docs/guides/database/seed-database, (3) https://github.com/entrptaher/feature-based-prisma-structure/blob/master/docs/project-structure.md, and (4) https://github.com/DevPreps/backend/tree/development/models

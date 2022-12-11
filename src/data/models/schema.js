@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import { sequelize } from '../database.js';
+import sequelize from '../database';
 
 // [x] M2.0 Model Definition
 export const Address = sequelize.define('address', {

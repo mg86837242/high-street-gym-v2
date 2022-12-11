@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize';
 
 // [x] M1.0 Database Connection String
 // Syntax: (alias) new Sequelize(database: string, username: string, password?: string, options?: Options)
-export const sequelize = new Sequelize('high_street_gym_test', 'root', 'root', {
+const sequelize = new Sequelize('high_street_gym_test', 'root', 'root', {
     host: 'localhost',
     port: 3306,
     dialect: 'mysql',
@@ -22,6 +22,8 @@ export const sequelize = new Sequelize('high_street_gym_test', 'root', 'root', {
         console.error('❌ Unable to connect to the database:', error);
     }
 })();
+
+export default sequelize;
 
 // // Testing the table sync w/o modularization: https://youtu.be/3_9-JFXTVDE?list=PLkqiWyX-_Lov8qmMOVn4SEQwr9yOjNn3f&t=342
 // const User = sequelize.define(
