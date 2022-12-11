@@ -12,7 +12,7 @@ WIP
 
 #### 1.1 Coding
 
--   [x] Data modeling
+-   [x] Database modeling
 -   [ ] Models
 -   [ ] Controllers
 -   [ ] Views
