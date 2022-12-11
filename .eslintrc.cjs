@@ -2,7 +2,7 @@ module.exports = {
     extends: ['airbnb', 'prettier'],
     plugins: ['prettier'],
     ignorePatterns: [
-        // Unused folders & files
+        // Unused folders && files
         'src/data/controllers/__controllers_high_street_gym_v0__',
         'src/data/controllers/__controllers_sail_away__',
         'src/data/models/__databaseVariation__',
