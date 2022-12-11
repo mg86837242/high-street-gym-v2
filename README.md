@@ -49,3 +49,4 @@ This version is created because of issues encountered during the implementation 
 This version will focus on the implementation of ORM.
 
 -   Adopt Vite as the [bundler](https://beta.reactjs.org/learn/start-a-new-react-project), subsequently leads to [restructuring files/folders](https://blog.webdevsimplified.com/2022-07/react-folder-structure/)
+-   Configure ESLint, in tandem with Prettier and Git
