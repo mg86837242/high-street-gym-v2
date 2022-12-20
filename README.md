@@ -50,4 +50,4 @@ This version will focus on the implementation of ORM.
 
 -   Adopt Vite as the [bundler](https://beta.reactjs.org/learn/start-a-new-react-project), subsequently leads to [restructuring files/folders](https://blog.webdevsimplified.com/2022-07/react-folder-structure/)
 -   Configure ESLint, with reference to Prettier and Git, and enforce linting rules
--   Remodel the database, adding the `Logins` table and removing the `Gyms` table
+-   Remodel the database, removing the `Gyms` table and renaming the `Users` table to `Logins` table
