@@ -29,7 +29,7 @@ WIP
 
 ### 2. 🔁 Changelogs
 
-These changelogs are created as quick references. In real development and production, changelogs will be managed within GitHub releases.
+These changelogs are created as quick references. In real development and production, changelogs will be managed within GitHub releases and/or Wiki.
 
 #### V0
 
