@@ -1,4 +1,4 @@
-import { DataTypes } from 'dbConn';
+import { DataTypes } from 'sequelize';
 import dbConn from '../dbConn.js';
 
 // [x] M2.0 Model Definition
