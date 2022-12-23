@@ -1,4 +1,4 @@
-import sequelize from '../dbConn.js';
+import dbConn from '../dbConn.js';
 import { Address, Login, Member, Trainer, Administrator, Blog, Activity, Session, Booking } from './schema.js';
 
 // The reason why this is called `seed.js` b/c of: https://www.prisma.io/docs/guides/database/seed-database
@@ -277,7 +277,7 @@ const bookingRecords = [
 
 // [x] M5.0 Model Synchronization & Creating Instances (aka Populating Tables) & Error Handling
 // // Code snippet from: https://youtu.be/3_9-JFXTVDE?list=PLkqiWyX-_Lov8qmMOVn4SEQwr9yOjNn3f&t=342
-// sequelize
+// dbConn
 // 	.sync({ force: true })
 // 	.then(() => {
 // 		return Address.create(addressRecord1)
@@ -292,7 +292,7 @@ const bookingRecords = [
 
 // Code snippet from: https://sequelize.org/docs/v6/core-concepts/model-instances/
 (async () => {
-    await sequelize.sync({ force: true });
+    await dbConn.sync({ force: true });
     // Promises chaining is rewritten by using: https://javascript.info/async-await#error-handling && https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#rewriting_a_promise_chain_with_an_async_function
     try {
         await Promise.all([

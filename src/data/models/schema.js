@@ -1,8 +1,8 @@
-import { DataTypes } from 'sequelize';
-import sequelize from '../dbConn.js';
+import { DataTypes } from 'dbConn';
+import dbConn from '../dbConn.js';
 
 // [x] M2.0 Model Definition
-export const Address = sequelize.define('address', {
+export const Address = dbConn.define('address', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     streetOne: { type: DataTypes.STRING(45), allowedNull: false },
     streetTwo: { type: DataTypes.STRING(45) },
@@ -12,13 +12,13 @@ export const Address = sequelize.define('address', {
     country: { type: DataTypes.STRING(45), allowedNull: false },
 });
 
-export const Login = sequelize.define('login', {
+export const Login = dbConn.define('login', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     username: { type: DataTypes.STRING(45), allowNull: false },
     password: { type: DataTypes.STRING(45), allowNull: false },
 });
 
-export const Administrator = sequelize.define('administrator', {
+export const Administrator = dbConn.define('administrator', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     // loginId: { type: DataTypes.INTEGER, allowNull: false },
     firstName: { type: DataTypes.STRING(45), allowNull: false },
@@ -29,7 +29,7 @@ export const Administrator = sequelize.define('administrator', {
     gymBranch: { type: DataTypes.STRING(45) },
 });
 
-export const Trainer = sequelize.define('trainer', {
+export const Trainer = dbConn.define('trainer', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     // loginId: { type: DataTypes.INTEGER, allowNull: false },
     firstName: { type: DataTypes.STRING(45), allowNull: false },
@@ -44,7 +44,7 @@ export const Trainer = sequelize.define('trainer', {
     gymBranch: { type: DataTypes.STRING(45) },
 });
 
-export const Member = sequelize.define('member', {
+export const Member = dbConn.define('member', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     // loginId: { type: DataTypes.INTEGER, allowNull: false },
     firstName: { type: DataTypes.STRING(45), allowNull: false },
@@ -57,7 +57,7 @@ export const Member = sequelize.define('member', {
 });
 
 // prettier-ignore
-export const Blog = sequelize.define('blog',{
+export const Blog = dbConn.define('blog',{
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     // memberId: { type: DataTypes.INTEGER, allowNull: false },
     title: { type: DataTypes.STRING(45), allowNull: false },
@@ -67,7 +67,7 @@ export const Blog = sequelize.define('blog',{
     timestamps: true,
 });
 
-export const Activity = sequelize.define('activity', {
+export const Activity = dbConn.define('activity', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     name: { type: DataTypes.STRING(45), allowNull: false },
     category: { type: DataTypes.ENUM('Aerobic', 'Strength', 'Aerobic & Strength', 'Flexibility') },
@@ -83,7 +83,7 @@ export const Activity = sequelize.define('activity', {
     durationMinute: { type: DataTypes.INTEGER, allowNull: false },
 });
 
-export const Session = sequelize.define('session', {
+export const Session = dbConn.define('session', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     // activityId: { type: DataTypes.INTEGER, allowNull: false },
     // trainerId: { type: DataTypes.INTEGER, allowNull: false },
@@ -91,7 +91,7 @@ export const Session = sequelize.define('session', {
     roomNumber: { type: DataTypes.STRING(45) },
 });
 
-export const Booking = sequelize.define('booking', {
+export const Booking = dbConn.define('booking', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     // sessionId: { type: DataTypes.INTEGER, allowNull: false, references: { model: Session, key: 'id' } },
     // memberId: { type: DataTypes.INTEGER, allowNull: false, references: { model: Member, key: 'id' } },
