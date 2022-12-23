@@ -1,5 +1,5 @@
-import sequelize from '../database';
-import { Address, Login, Member, Trainer, Administrator, Blog, Activity, Session, Booking } from './schema';
+import sequelize from '../dbConn.js';
+import { Address, Login, Member, Trainer, Administrator, Blog, Activity, Session, Booking } from './schema.js';
 
 // The reason why this is called `seed.js` b/c of: https://www.prisma.io/docs/guides/database/seed-database
 // Also, the file structure of the `models` folder is by juxtaposing: (1) https://www.prisma.io/docs/concepts/components/prisma-schema, (2) https://www.prisma.io/docs/guides/database/seed-database, (3) https://github.com/entrptaher/feature-based-prisma-structure/blob/master/docs/project-structure.md, and (4) https://github.com/DevPreps/backend/tree/development/models
@@ -251,14 +251,14 @@ const activityRecords = [
 
 const sessionRecords = [
     {
-        gymTrainerId: 1,
         activityId: 1,
+        trainerId: 1,
         dateTime: '2023-01-01 15:00:00',
         roomNumber: 201,
     },
     {
-        gymTrainerId: 2,
         activityId: 7,
+        trainerId: 2,
         dateTime: '2023-01-01 16:00:00',
         roomNumber: 201,
     },

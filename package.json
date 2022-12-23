@@ -7,9 +7,9 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "test-db-conn": "nodemon src/backend/database.js",
-        "test-schema": "nodemon src/backend/models/schema.js",
-        "test-seed": "nodemon src/backend/models/seed.js"
+        "test-db-conn": "node src/data/database.js",
+        "test-schema": "node src/data/models/schema.js",
+        "test-seed": "node src/data/models/seed.js"
     },
     "dependencies": {
         "@vitejs/plugin-react": "^2.2.0",

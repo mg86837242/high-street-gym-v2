@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../database';
+import sequelize from '../dbConn.js';
 
 // [x] M2.0 Model Definition
 export const Address = sequelize.define('address', {
@@ -99,16 +99,16 @@ export const Booking = sequelize.define('booking', {
 
 // [x] M3.0 Associations (aka Relationships)
 // 3.1 Login && Administrator
-Login.hasOne(Administrator, { foreignKey: { name: 'memberUserId', allowNull: false } });
-Administrator.belongsTo(Login, { foreignKey: { name: 'memberUserId', allowNull: false } });
+Login.hasOne(Administrator, { foreignKey: { allowNull: false } });
+Administrator.belongsTo(Login, { foreignKey: { allowNull: false } });
 
 // 3.2 Login && Trainer
-Login.hasOne(Trainer, { foreignKey: { name: 'memberUserId', allowNull: false } });
-Trainer.belongsTo(Login, { foreignKey: { name: 'memberUserId', allowNull: false } });
+Login.hasOne(Trainer, { foreignKey: { allowNull: false } });
+Trainer.belongsTo(Login, { foreignKey: { allowNull: false } });
 
 // 3.3 Login && Member
-Login.hasOne(Member, { foreignKey: { name: 'memberUserId', allowNull: false } });
-Member.belongsTo(Login, { foreignKey: { name: 'memberUserId', allowNull: false } });
+Login.hasOne(Member, { foreignKey: { allowNull: false } });
+Member.belongsTo(Login, { foreignKey: { allowNull: false } });
 
 // 3.4 Address && Administrator
 Address.hasMany(Administrator, { foreignKey: { allowNull: false } });
