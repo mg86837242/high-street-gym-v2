@@ -14,4 +14,7 @@ module.exports = {
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
     },
+    settings: {
+        'import/extensions': ['.js', '.jsx'],
+    },
 };
