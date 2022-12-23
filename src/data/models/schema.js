@@ -18,7 +18,7 @@ export const Login = sequelize.define('login', {
     password: { type: DataTypes.STRING(45), allowNull: false },
 });
 
-export const Member = sequelize.define('member', {
+export const Administrator = sequelize.define('administrator', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     // loginId: { type: DataTypes.INTEGER, allowNull: false },
     firstName: { type: DataTypes.STRING(45), allowNull: false },
@@ -26,8 +26,7 @@ export const Member = sequelize.define('member', {
     email: { type: DataTypes.STRING(45), allowNull: false },
     phone: { type: DataTypes.STRING(45), allowNull: false },
     // addressId: { type: DataTypes.INTEGER, allowedNull: false },
-    age: { type: DataTypes.INTEGER, allowNull: false },
-    gender: { type: DataTypes.ENUM('Female', 'Male', 'Other'), allowNull: false },
+    gymBranch: { type: DataTypes.STRING(45) },
 });
 
 export const Trainer = sequelize.define('trainer', {
@@ -45,7 +44,7 @@ export const Trainer = sequelize.define('trainer', {
     gymBranch: { type: DataTypes.STRING(45) },
 });
 
-export const Administrator = sequelize.define('administrator', {
+export const Member = sequelize.define('member', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     // loginId: { type: DataTypes.INTEGER, allowNull: false },
     firstName: { type: DataTypes.STRING(45), allowNull: false },
@@ -53,7 +52,8 @@ export const Administrator = sequelize.define('administrator', {
     email: { type: DataTypes.STRING(45), allowNull: false },
     phone: { type: DataTypes.STRING(45), allowNull: false },
     // addressId: { type: DataTypes.INTEGER, allowedNull: false },
-    gymBranch: { type: DataTypes.STRING(45) },
+    age: { type: DataTypes.INTEGER, allowNull: false },
+    gender: { type: DataTypes.ENUM('Female', 'Male', 'Other'), allowNull: false },
 });
 
 // prettier-ignore
@@ -98,29 +98,29 @@ export const Booking = sequelize.define('booking', {
 });
 
 // [x] M3.0 Associations (aka Relationships)
-// 3.1 Login && Member
-Login.hasOne(Member, { foreignKey: { name: 'memberUserId', allowNull: false } });
-Member.belongsTo(Login, { foreignKey: { name: 'memberUserId', allowNull: false } });
+// 3.1 Login && Administrator
+Login.hasOne(Administrator, { foreignKey: { name: 'memberUserId', allowNull: false } });
+Administrator.belongsTo(Login, { foreignKey: { name: 'memberUserId', allowNull: false } });
 
 // 3.2 Login && Trainer
 Login.hasOne(Trainer, { foreignKey: { name: 'memberUserId', allowNull: false } });
 Trainer.belongsTo(Login, { foreignKey: { name: 'memberUserId', allowNull: false } });
 
-// 3.3 Login && Administrator
-Login.hasOne(Administrator, { foreignKey: { name: 'memberUserId', allowNull: false } });
-Administrator.belongsTo(Login, { foreignKey: { name: 'memberUserId', allowNull: false } });
+// 3.3 Login && Member
+Login.hasOne(Member, { foreignKey: { name: 'memberUserId', allowNull: false } });
+Member.belongsTo(Login, { foreignKey: { name: 'memberUserId', allowNull: false } });
 
-// 3.4 Address && Member
-Address.hasMany(Member, { foreignKey: { allowNull: false } });
-Member.belongsTo(Address, { foreignKey: { allowNull: false } });
+// 3.4 Address && Administrator
+Address.hasMany(Administrator, { foreignKey: { allowNull: false } });
+Administrator.belongsTo(Address, { foreignKey: { allowNull: false } });
 
-// 3.5 Address && Member
+// 3.5 Address && Trainer
 Address.hasMany(Trainer, { foreignKey: { allowNull: false } });
 Trainer.belongsTo(Address, { foreignKey: { allowNull: false } });
 
 // 3.6 Address && Member
-Address.hasMany(Administrator, { foreignKey: { allowNull: false } });
-Administrator.belongsTo(Address, { foreignKey: { allowNull: false } });
+Address.hasMany(Member, { foreignKey: { allowNull: false } });
+Member.belongsTo(Address, { foreignKey: { allowNull: false } });
 
 // 3.7 Members && Blogs
 Member.hasMany(Blog, { foreignKey: { allowNull: false } });

@@ -5,7 +5,6 @@ import { Address, Login, Member, Trainer, Administrator, Blog, Activity, Session
 // Also, the file structure of the `models` folder is by juxtaposing: (1) https://www.prisma.io/docs/concepts/components/prisma-schema, (2) https://www.prisma.io/docs/guides/database/seed-database, (3) https://github.com/entrptaher/feature-based-prisma-structure/blob/master/docs/project-structure.md, and (4) https://github.com/DevPreps/backend/tree/development/models
 
 // [x] M4.0 Variables for Creating Instances (aka Populating Tables)
-// 4.1 Address records
 const addressRecords = [
     {
         streetOne: '1 Amber St',
@@ -65,101 +64,106 @@ const addressRecords = [
     },
 ];
 
-// 4.2 User records
-const userRecords = [
+const loginRecords = [
     {
+        username: 'jadoe',
+        password: 'password',
+    },
+    {
+        username: 'jbdoe',
+        password: 'password',
+    },
+    {
+        username: 'jcdoe',
+        password: 'password',
+    },
+    {
+        username: 'jddoe',
+        password: 'password',
+    },
+    {
+        username: 'jedoe',
+        password: 'password',
+    },
+    {
+        username: 'jfdoe',
+        password: 'password',
+    },
+];
+
+const administratorRecords = [
+    {
+        loginId: 1,
         firstName: 'Ja',
         lastName: 'Doe',
-        role: 'Manager',
-        email: 'ja@gmail.com',
         phone: '0123456789',
-        username: 'ja@gamil.com',
-        password: 'password',
-        addressId: 3,
+        email: 'ja@gmail.com',
+        addressId: 1,
+        gymBranch: 'A Branch',
     },
     {
+        loginId: 2,
         firstName: 'Jb',
         lastName: 'Doe',
-        role: 'Manager',
-        email: 'jb@gmail.com',
         phone: '0123456789',
-        username: 'jb@gamil.com',
-        password: 'password',
-        addressId: 4,
+        email: 'jb@gmail.com',
+        addressId: 2,
+        gymBranch: 'A Branch',
     },
+];
+
+const trainerRecords = [
     {
+        loginId: 3,
         firstName: 'Jc',
         lastName: 'Doe',
-        role: 'Trainer',
-        email: 'jc@gmail.com',
         phone: '0123456789',
-        username: 'jc@gamil.com',
-        password: 'password',
-        addressId: 5,
+        email: 'jc@gmail.com',
+        addressId: 3,
+        description: 'Lorem ipsum',
+        specialty: 'Aerobatic and physiotherapy',
+        certificate: 'Certificate III in Fitness',
+        imageUrl: 'n/a',
+        gymBranch: 'A Branch',
     },
     {
+        loginId: 4,
         firstName: 'Jd',
         lastName: 'Doe',
-        role: 'Trainer',
+        phone: '0123456789',
         email: 'jd@gmail.com',
-        phone: '0123456789',
-        username: 'jd@gamil.com',
-        password: 'password',
-        addressId: 6,
-    },
-    {
-        firstName: 'Je',
-        lastName: 'Doe',
-        role: 'Member',
-        email: 'je@gmail.com',
-        phone: '0123456789',
-        username: 'je@gamil.com',
-        password: 'password',
-        addressId: 7,
-    },
-    {
-        firstName: 'Jf',
-        lastName: 'Doe',
-        role: 'Member',
-        email: 'jf@gmail.com',
-        phone: '0123456789',
-        username: 'jf@gamil.com',
-        password: 'password',
-        addressId: 8,
+        addressId: 4,
+        description: 'Lorem ipsum',
+        specialty: 'Strength and physiotherapy',
+        certificate: 'Certificate IV in Fitness',
+        imageUrl: 'n/a',
+        gymBranch: 'A Branch',
     },
 ];
 
-// 4.3 Gym records
-const gymRecords = [
-    {
-        name: 'A Branch',
-        addressId: 1,
-        managerUserId: 1,
-        imageUrl: 'n/a',
-    },
-    {
-        name: 'B Branch',
-        addressId: 2,
-        managerUserId: 2,
-        imageUrl: 'n/a',
-    },
-];
-
-// 4.4 Member records
 const memberRecords = [
     {
-        memberUserId: 5,
+        loginId: 5,
+        firstName: 'Je',
+        lastName: 'Doe',
+        phone: '0123456789',
+        email: 'je@gmail.com',
+        addressId: 5,
         age: 25,
         gender: 'Female',
     },
     {
-        memberUserId: 6,
+        loginId: 6,
+        firstName: 'Jf',
+        lastName: 'Doe',
+        phone: '0123456789',
+        email: 'jf@gmail.com',
+        addressId: 6,
         age: 26,
         gender: 'Male',
     },
 ];
 
-// 4.5 Blog records
 const blogRecords = [
     {
         memberId: 1,
@@ -168,45 +172,6 @@ const blogRecords = [
     },
 ];
 
-// 4.6 Trainer records
-const trainerRecords = [
-    {
-        trainerUserId: 3,
-        description: 'Lorem ipsum',
-        certificate: 'Certificate III in Fitness',
-        specialty: 'Aerobatic and physiotherapy',
-        imageUrl: 'n/a',
-    },
-    {
-        trainerUserId: 4,
-        description: 'Lorem ipsum',
-        certificate: 'Certificate IV in Fitness',
-        specialty: 'Strength and physiotherapy',
-        imageUrl: 'n/a',
-    },
-];
-
-// 4.7 GymTrainer records
-const gymTrainerRecords = [
-    {
-        gymId: 1,
-        trainerId: 1,
-    },
-    {
-        gymId: 1,
-        trainerId: 2,
-    },
-    {
-        gymId: 2,
-        trainerId: 1,
-    },
-    {
-        gymId: 2,
-        trainerId: 2,
-    },
-];
-
-// 4.8 Activity records
 const activityRecords = [
     {
         name: 'Yoga',
@@ -262,7 +227,7 @@ const activityRecords = [
         durationMinute: 45,
     },
     {
-        name: 'Boxing Circuit',
+        name: 'Boxing',
         category: 'Aerobic & Strength',
         description: 'Lorem ipsum',
         intensityLevel: 'Medium',
@@ -279,29 +244,26 @@ const activityRecords = [
         intensityLevel: 'Medium',
         maxPeopleAllowed: 26,
         requirementOne: 'Large towels are compulsory for Group Exercise and Gym.',
-        requirementTwo: 'BYO boxing gloves, wraps and inner liners.',
         price: 60,
         durationMinute: 45,
     },
 ];
 
-// 4.9 Session records
 const sessionRecords = [
     {
         gymTrainerId: 1,
         activityId: 1,
-        dateTime: '2022-11-21 07:15:00',
+        dateTime: '2023-01-01 15:00:00',
         roomNumber: 201,
     },
     {
         gymTrainerId: 2,
         activityId: 7,
-        dateTime: '2022-11-2 07:15:00',
+        dateTime: '2023-01-01 16:00:00',
         roomNumber: 201,
     },
 ];
 
-// 4.10 Booking records
 const bookingRecords = [
     {
         sessionId: 1,
@@ -336,12 +298,11 @@ const bookingRecords = [
         await Promise.all([
             // NB By default, `bulkCreate` does not run validations on each object that is going to be created (which `create` does). To make `bulkCreate` run these validations as well, you must pass the `validate: true` option. This will decrease performance: https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#creating-in-bulk
             Address.bulkCreate(addressRecords),
-            User.bulkCreate(userRecords),
-            Gym.bulkCreate(gymRecords),
+            Login.bulkCreate(loginRecords),
+            Administrator.bulkCreate(administratorRecords),
+            Trainer.bulkCreate(trainerRecords),
             Member.bulkCreate(memberRecords),
             Blog.bulkCreate(blogRecords),
-            Trainer.bulkCreate(trainerRecords),
-            GymTrainer.bulkCreate(gymTrainerRecords),
             Activity.bulkCreate(activityRecords),
             Session.bulkCreate(sessionRecords),
             Booking.bulkCreate(bookingRecords),
