@@ -281,7 +281,7 @@ const bookingRecords = [
 // 	.sync({ force: true })
 // 	.then(() => {
 // 		return Address.create(addressRecord1)
-// 		// ...other instance creations
+// 		// ...creation of other instances
 // 	})
 // 	.then((data) => {
 // 		console.log('✅ Tables and models synced successfully!');
