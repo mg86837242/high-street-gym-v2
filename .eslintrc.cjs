@@ -10,11 +10,15 @@ module.exports = {
         'src/data/models/__models_sail_away__',
     ],
     rules: {
-        'prettier/prettier': ['error'],
+        'prettier/prettier': 'error',
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
     },
     settings: {
-        'import/extensions': ['.js', '.jsx'],
+        'import/resolver': {
+            node: {
+                extensions: 'off',
+            },
+        },
     },
 };
