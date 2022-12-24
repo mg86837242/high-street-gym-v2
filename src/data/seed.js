@@ -1,4 +1,4 @@
-import dbConn from '../dbConn.js';
+import dbConn from './dbConn.js';
 import { Address, Login, Member, Trainer, Administrator, Blog, Activity, Session, Booking } from './schema.js';
 
 // The reason why this is called `seed.js` b/c of: (1) https://www.prisma.io/docs/guides/database/seed-database, and (2) https://www.wikiwand.com/en/Database_seeding
