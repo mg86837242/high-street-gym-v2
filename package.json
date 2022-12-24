@@ -7,6 +7,8 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
+        "format": "prettier --write .",
+        "lint": "eslint .",
         "test-db-conn": "node src/data/database.js",
         "test-schema": "node src/data/models/schema.js",
         "test-seed": "node src/data/models/seed.js"
