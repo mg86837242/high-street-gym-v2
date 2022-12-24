@@ -17,7 +17,7 @@ module.exports = {
     settings: {
         'import/resolver': {
             node: {
-                extensions: ['warn'],
+                extensions: 'warn',
             },
         },
     },
