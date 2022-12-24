@@ -1,6 +1,6 @@
 module.exports = {
     extends: ['airbnb', 'prettier'],
-    plugins: ['prettier', 'plugin:import/javascript'],
+    plugins: ['prettier'],
     ignorePatterns: [
         // Unused folders && files
         'src/data/controllers/__controllers_high_street_gym_v0__',
