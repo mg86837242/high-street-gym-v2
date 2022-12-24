@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import dbConn from '../dbConn';
+import dbConn from '../dbConn.js';
 
 // [x] M2.0 Model Definition
 export const Address = dbConn.define('address', {
