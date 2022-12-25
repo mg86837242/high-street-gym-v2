@@ -5,11 +5,7 @@ export function getLoginById(loginId) {
 }
 
 export function getLoginByUsername(loginUsername) {
-    return Login.findAll({
-        where: {
-            username: loginUsername,
-        },
-    });
+    return Login.findAll({ where: { username: loginUsername } });
 }
 
 export function createLogin(loginUsername, loginPassword) {
@@ -25,18 +21,10 @@ export function updateLoginById(loginId, loginUsername, loginPassword) {
             username: loginUsername,
             password: loginPassword,
         },
-        {
-            where: {
-                id: loginId,
-            },
-        }
+        { where: { id: loginId } }
     );
 }
 
 export function deleteLoginById(loginId) {
-    return Login.destroy({
-        where: {
-            id: loginId,
-        },
-    });
+    return Login.destroy({ where: { id: loginId } });
 }
