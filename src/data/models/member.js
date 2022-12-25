@@ -7,6 +7,7 @@ export function getAllMembers() {
 export function getMemberById(memberId) {
     return Member.findByPk(memberId);
 }
+
 // export function getLoginByUsername(loginUsername) {
 //     return Login.findAll({ where: { username: loginUsername } });
 // }
