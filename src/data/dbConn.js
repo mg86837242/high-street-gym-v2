@@ -7,7 +7,7 @@ const dbConn = new Sequelize('high_street_gym_test', 'root', 'root', {
     port: 3306,
     dialect: 'mysql',
     define: {
-        freezeTableName: false,
+        freezeTableName: false, // by default
         timestamps: false,
     },
 });

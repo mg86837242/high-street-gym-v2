@@ -13,13 +13,13 @@ export const Address = dbConn.define('address', {
 });
 
 export const Login = dbConn.define('login', {
-    id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     username: { type: DataTypes.STRING(45), allowNull: false },
     password: { type: DataTypes.STRING(45), allowNull: false },
 });
 
 export const Administrator = dbConn.define('administrator', {
-    id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     // loginId: { type: DataTypes.INTEGER, allowNull: false },
     firstName: { type: DataTypes.STRING(45), allowNull: false },
     lastName: { type: DataTypes.STRING(45), allowNull: false },
@@ -30,7 +30,7 @@ export const Administrator = dbConn.define('administrator', {
 });
 
 export const Trainer = dbConn.define('trainer', {
-    id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     // loginId: { type: DataTypes.INTEGER, allowNull: false },
     firstName: { type: DataTypes.STRING(45), allowNull: false },
     lastName: { type: DataTypes.STRING(45), allowNull: false },
@@ -45,7 +45,7 @@ export const Trainer = dbConn.define('trainer', {
 });
 
 export const Member = dbConn.define('member', {
-    id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     // loginId: { type: DataTypes.INTEGER, allowNull: false },
     firstName: { type: DataTypes.STRING(45), allowNull: false },
     lastName: { type: DataTypes.STRING(45), allowNull: false },
@@ -57,8 +57,8 @@ export const Member = dbConn.define('member', {
 });
 
 // prettier-ignore
-export const Blog = dbConn.define('blog',{
-    id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+export const Blog = dbConn.define('blog', {
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     // memberId: { type: DataTypes.INTEGER, allowNull: false },
     title: { type: DataTypes.STRING(45), allowNull: false },
     body: { type: DataTypes.STRING(6000), allowNull: false },
@@ -68,7 +68,7 @@ export const Blog = dbConn.define('blog',{
 });
 
 export const Activity = dbConn.define('activity', {
-    id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     name: { type: DataTypes.STRING(45), allowNull: false },
     category: { type: DataTypes.ENUM('Aerobic', 'Strength', 'Aerobic & Strength', 'Flexibility') },
     description: { type: DataTypes.STRING(255) },
@@ -84,7 +84,7 @@ export const Activity = dbConn.define('activity', {
 });
 
 export const Session = dbConn.define('session', {
-    id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     // activityId: { type: DataTypes.INTEGER, allowNull: false },
     // trainerId: { type: DataTypes.INTEGER, allowNull: false },
     dateTime: { type: DataTypes.DATE, allowNull: false },
@@ -92,7 +92,7 @@ export const Session = dbConn.define('session', {
 });
 
 export const Booking = dbConn.define('booking', {
-    id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     // sessionId: { type: DataTypes.INTEGER, allowNull: false, references: { model: Session, key: 'id' } },
     // memberId: { type: DataTypes.INTEGER, allowNull: false, references: { model: Member, key: 'id' } },
 });
