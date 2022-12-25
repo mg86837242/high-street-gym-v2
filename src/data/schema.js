@@ -20,48 +20,48 @@ export const Login = dbConn.define('login', {
 
 export const Administrator = dbConn.define('administrator', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
+    // loginId:
     firstName: { type: DataTypes.STRING(45), allowNull: false },
     lastName: { type: DataTypes.STRING(45), allowNull: false },
     email: { type: DataTypes.STRING(45), allowNull: false },
     phone: { type: DataTypes.STRING(45), allowNull: false },
+    // addressId:
     gymBranch: { type: DataTypes.STRING(45) },
-    // addressId FK
-    // loginId FK
 });
 
 export const Trainer = dbConn.define('trainer', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
+    // loginId:
     firstName: { type: DataTypes.STRING(45), allowNull: false },
     lastName: { type: DataTypes.STRING(45), allowNull: false },
     email: { type: DataTypes.STRING(45), allowNull: false },
     phone: { type: DataTypes.STRING(45), allowNull: false },
+    // addressId:
     description: { type: DataTypes.STRING(255) },
     certificate: { type: DataTypes.STRING(45) },
     specialty: { type: DataTypes.STRING(45) },
     imageUrl: { type: DataTypes.STRING(255) },
     gymBranch: { type: DataTypes.STRING(45) },
-    // addressId FK
-    // loginId FK
 });
 
 export const Member = dbConn.define('member', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
+    // loginId:
     firstName: { type: DataTypes.STRING(45), allowNull: false },
     lastName: { type: DataTypes.STRING(45), allowNull: false },
     email: { type: DataTypes.STRING(45), allowNull: false },
     phone: { type: DataTypes.STRING(45), allowNull: false },
+    // addressId:
     age: { type: DataTypes.INTEGER, allowNull: false },
     gender: { type: DataTypes.ENUM('Female', 'Male', 'Other'), allowNull: false },
-    // addressId FK
-    // loginId FK
 });
 
 // prettier-ignore
 export const Blog = dbConn.define('blog', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
+    // memberId:
     title: { type: DataTypes.STRING(45), allowNull: false },
     body: { type: DataTypes.STRING(6000), allowNull: false },
-    // memberId FK
 },
 {
     timestamps: true,
@@ -87,14 +87,14 @@ export const Session = dbConn.define('session', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     dateTime: { type: DataTypes.DATE, allowNull: false },
     roomNumber: { type: DataTypes.STRING(45) },
-    // trainerId FK
-    // activityId FK
+    // activityId:
+    // trainerId:
 });
 
 export const Booking = dbConn.define('booking', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
-    // memberId FK
-    // activityId FK
+    // sessionId:
+    // memberId:
 });
 
 // [x] M3.0 Associations (aka Relationships)
