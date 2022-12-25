@@ -1,5 +1,9 @@
 import { Login } from '../schema.js';
 
+export function getAllLogins() {
+    return Login.findAll();
+}
+
 export function getLoginById(idInput) {
     return Login.findByPk(idInput);
 }

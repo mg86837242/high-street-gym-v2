@@ -99,15 +99,15 @@ export const Booking = dbConn.define('booking', {
 
 // [x] M3.0 Associations (aka Relationships)
 // 3.1 Login && Administrator
-Login.hasOne(Administrator, { foreignKey: { allowNull: false } });
+Login.hasOne(Administrator, { foreignKey: { allowNull: false, onDelete: 'CASCADE' } });
 Administrator.belongsTo(Login, { foreignKey: { allowNull: false } });
 
 // 3.2 Login && Trainer
-Login.hasOne(Trainer, { foreignKey: { allowNull: false } });
+Login.hasOne(Trainer, { foreignKey: { allowNull: false, onDelete: 'CASCADE' } });
 Trainer.belongsTo(Login, { foreignKey: { allowNull: false } });
 
 // 3.3 Login && Member
-Login.hasOne(Member, { foreignKey: { allowNull: false } });
+Login.hasOne(Member, { foreignKey: { allowNull: false, onDelete: 'CASCADE' } });
 Member.belongsTo(Login, { foreignKey: { allowNull: false } });
 
 // 3.4 Address && Administrator
