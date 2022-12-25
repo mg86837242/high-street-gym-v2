@@ -1,7 +1,7 @@
 import { Login } from '../schema.js';
 
-export function getLoginById(loginIdInput) {
-    return Login.findByPk(loginIdInput);
+export function getLoginById(idInput) {
+    return Login.findByPk(idInput);
 }
 
 export function getLoginByUsername(usernameInput) {
@@ -15,16 +15,16 @@ export function createLogin(usernameInput, passwordInput) {
     });
 }
 
-export function updateLoginById(loginIdInput, usernameInput, passwordInput) {
+export function updateLoginById(idInput, usernameInput, passwordInput) {
     return Login.update(
         {
             username: usernameInput,
             password: passwordInput,
         },
-        { where: { id: loginIdInput } }
+        { where: { id: idInput } }
     );
 }
 
-export function deleteLoginById(loginIdInput) {
-    return Login.destroy({ where: { id: loginIdInput } });
+export function deleteLoginById(idInput) {
+    return Login.destroy({ where: { id: idInput } });
 }
