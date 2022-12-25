@@ -25,6 +25,8 @@ export const Administrator = dbConn.define('administrator', {
     email: { type: DataTypes.STRING(45), allowNull: false },
     phone: { type: DataTypes.STRING(45), allowNull: false },
     gymBranch: { type: DataTypes.STRING(45) },
+    // addressId FK
+    // loginId FK
 });
 
 export const Trainer = dbConn.define('trainer', {
@@ -38,6 +40,8 @@ export const Trainer = dbConn.define('trainer', {
     specialty: { type: DataTypes.STRING(45) },
     imageUrl: { type: DataTypes.STRING(255) },
     gymBranch: { type: DataTypes.STRING(45) },
+    // addressId FK
+    // loginId FK
 });
 
 export const Member = dbConn.define('member', {
@@ -48,6 +52,8 @@ export const Member = dbConn.define('member', {
     phone: { type: DataTypes.STRING(45), allowNull: false },
     age: { type: DataTypes.INTEGER, allowNull: false },
     gender: { type: DataTypes.ENUM('Female', 'Male', 'Other'), allowNull: false },
+    // addressId FK
+    // loginId FK
 });
 
 // prettier-ignore
@@ -55,6 +61,7 @@ export const Blog = dbConn.define('blog', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     title: { type: DataTypes.STRING(45), allowNull: false },
     body: { type: DataTypes.STRING(6000), allowNull: false },
+    // memberId FK
 },
 {
     timestamps: true,
@@ -80,10 +87,14 @@ export const Session = dbConn.define('session', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     dateTime: { type: DataTypes.DATE, allowNull: false },
     roomNumber: { type: DataTypes.STRING(45) },
+    // trainerId FK
+    // activityId FK
 });
 
 export const Booking = dbConn.define('booking', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
+    // memberId FK
+    // activityId FK
 });
 
 // [x] M3.0 Associations (aka Relationships)

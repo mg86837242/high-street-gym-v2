@@ -4,31 +4,12 @@ export function getAllMembers() {
     return Member.findAll();
 }
 
-export function getMemberById(memberId) {
-    return Member.findByPk(memberId);
+export function getMemberById(memberIdInput) {
+    return Member.findByPk(memberIdInput);
 }
 
-// export function getLoginByUsername(loginUsername) {
-//     return Login.findAll({ where: { username: loginUsername } });
-// }
+export function getCustomerByLoginID(loginIdInput) {
+    return Member.findAll({ where: { loginId: loginIdInput } });
+}
 
-// export function createLogin(loginUsername, loginPassword) {
-//     return Login.create({
-//         username: loginUsername,
-//         password: loginPassword,
-//     });
-// }
-
-// export function updateLoginById(loginId, loginUsername, loginPassword) {
-//     return Login.update(
-//         {
-//             username: loginUsername,
-//             password: loginPassword,
-//         },
-//         { where: { id: loginId } }
-//     );
-// }
-
-// export function deleteLoginById(loginId) {
-//     return Login.destroy({ where: { id: loginId } });
-// }
+export function createCustomer() {}

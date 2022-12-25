@@ -4,7 +4,7 @@ import { Address, Login, Member, Trainer, Administrator, Blog, Activity, Session
 // The reason why this is called `seed.js` b/c of: (1) https://www.prisma.io/docs/guides/database/seed-database, and (2) https://www.wikiwand.com/en/Database_seeding
 // Also, the file structure of the `models` folder is decided by juxtaposing: (1) https://www.prisma.io/docs/concepts/components/prisma-schema, (2) https://www.prisma.io/docs/guides/database/seed-database, (3) https://github.com/entrptaher/feature-based-prisma-structure/blob/master/docs/project-structure.md, and (4) https://github.com/DevPreps/backend/tree/development/models
 
-// [x] M4.0 Variables for Creating Instances (aka Populating Tables)
+// [x] M4.0 Variables for Seeding (aka Populating Tables)
 const addressRecords = [
     {
         streetOne: '1 Amber St',
@@ -275,7 +275,7 @@ const bookingRecords = [
     },
 ];
 
-// [x] M5.0 Model Synchronization & Creating Instances (aka Populating Tables) & Error Handling
+// [x] M5.0 Model Synchronization & Seeding (aka Populating Tables) & Error Handling
 // // Code snippet from: https://youtu.be/3_9-JFXTVDE?list=PLkqiWyX-_Lov8qmMOVn4SEQwr9yOjNn3f&t=342
 // dbConn
 // 	.sync({ force: true })
@@ -314,4 +314,4 @@ const bookingRecords = [
     }
 })();
 
-// [ ] M6.0 Model Querying => This part should probably be modularized and coded in separate files
+// [x] M6.0 Model Querying => This part will be modularized and placed in the `models` folder

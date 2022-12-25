@@ -1,30 +1,30 @@
 import { Login } from '../schema.js';
 
-export function getLoginById(loginId) {
-    return Login.findByPk(loginId);
+export function getLoginById(loginIdInput) {
+    return Login.findByPk(loginIdInput);
 }
 
-export function getLoginByUsername(loginUsername) {
-    return Login.findAll({ where: { username: loginUsername } });
+export function getLoginByUsername(usernameInput) {
+    return Login.findAll({ where: { username: usernameInput } });
 }
 
-export function createLogin(loginUsername, loginPassword) {
+export function createLogin(usernameInput, passwordInput) {
     return Login.create({
-        username: loginUsername,
-        password: loginPassword,
+        username: usernameInput,
+        password: passwordInput,
     });
 }
 
-export function updateLoginById(loginId, loginUsername, loginPassword) {
+export function updateLoginById(loginIdInput, usernameInput, passwordInput) {
     return Login.update(
         {
-            username: loginUsername,
-            password: loginPassword,
+            username: usernameInput,
+            password: passwordInput,
         },
-        { where: { id: loginId } }
+        { where: { id: loginIdInput } }
     );
 }
 
-export function deleteLoginById(loginId) {
-    return Login.destroy({ where: { id: loginId } });
+export function deleteLoginById(loginIdInput) {
+    return Login.destroy({ where: { id: loginIdInput } });
 }
